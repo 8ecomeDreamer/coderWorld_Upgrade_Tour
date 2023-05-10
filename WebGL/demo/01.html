@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webgl初始化</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400">
+        webgl初始化
+    </canvas>
+</body>
+</html>
+<script>
+    const canvas = document.getElementById('canvas')
+    const gl = canvas.getContext('webgl')
+
+    // 着色器
+    // 创建着色器源码
+    const VERTEX_SHADER_SOURCE = `
+        void main () {
+            gl_Position = vec4(0.0,0.0,0.0,1.0);
+            gl_PointSize = 10.0;
+        }
+    ` // 顶点着色器
+    const FRAGMENT_SHADER_SOURCE = `
+        void main(){
+            gl_Position = vec4(1.0,0.0,0.0,0.0);
+            gl_PointSize = 20.0;
+        }
+    ` // 片元着色器
+
+</script>
